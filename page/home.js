@@ -16,6 +16,7 @@ $("[animation='hero--trigger']").each(function (index) {
     target,
     {
       y: "-20%",
+      scale: 1.2,
     },
     0
   );
