@@ -1,14 +1,9 @@
 // split start
-let text;
+
 let texthero;
 
 // Split the text up
 function runSplit() {
-  text = new SplitType("[animation='split-stagger-text']", {
-    types: "lines, words",
-    lineClass: "split-line",
-    wordClass: "is--scroll-intoview-scrub",
-  });
   texthero = new SplitType("[animation='split-stagger-hero']", {
     types: "lines, words",
     lineClass: "split-line",
