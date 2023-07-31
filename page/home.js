@@ -29,7 +29,7 @@ $(".is--home-experience.is--second").each(function (index) {
     scrollTrigger: {
       trigger: $(this),
       start: "top bottom",
-      end: "bottom center",
+      end: "bottom bottom",
       ease: "Quint.easeOut",
       duration: 1,
       scrub: true,
@@ -53,7 +53,7 @@ $(".is--home-experience.is--third").each(function (index) {
   let tl = gsap.timeline({
     scrollTrigger: {
       trigger: $(this),
-      start: "top center",
+      start: "top bottom",
       end: "bottom bottom",
       ease: "Quint.easeOut",
       duration: 1,
