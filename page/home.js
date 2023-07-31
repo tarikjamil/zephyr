@@ -15,7 +15,7 @@ $("[animation='hero--trigger']").each(function (index) {
   tl.to(
     target,
     {
-      y: "15%",
+      y: "-15%",
     },
     0
   );
