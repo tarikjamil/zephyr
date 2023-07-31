@@ -28,7 +28,7 @@ $(".is--home-experience.is--second").each(function (index) {
   let tl = gsap.timeline({
     scrollTrigger: {
       trigger: $(this),
-      start: "top top",
+      start: "top bottom",
       end: "bottom center",
       ease: "Quint.easeOut",
       duration: 1,
