@@ -110,3 +110,19 @@ $(".navbar--menu-trigger").click(function () {
   }
   $(this).data("clicks", !clicks);
 });
+
+$(".zephyr-footer-logo-wrapper").each(function (index) {
+  let target = $(".zephyr-footer-logo-wrapper path");
+
+  let tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: $(this),
+      start: "top center",
+      end: "bottom bottom",
+      ease: "Quint.easeOut",
+      duration: 1,
+    },
+  });
+
+  tl.to(target, { y: "100%", stagger: { each: 0.1, from: "start" } });
+});
