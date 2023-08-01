@@ -121,6 +121,7 @@ $(".zephyr-footer-logo-wrapper").each(function (index) {
       end: "bottom bottom",
       ease: "Quint.easeOut",
       duration: 1,
+      delay: 0.5,
     },
   });
 
