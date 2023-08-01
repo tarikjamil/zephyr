@@ -22,62 +22,64 @@ $("[animation='hero--trigger']").each(function (index) {
   );
 });
 
-$(".is--home-experience.is--second").each(function (index) {
-  let target = $(".circle--bg");
+if (window.innerWidth > 992) {
+  $(".is--home-experience.is--second").each(function (index) {
+    let target = $(".circle--bg");
 
-  let tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: $(this),
-      start: "top bottom",
-      end: "bottom bottom",
-      ease: "Quint.easeOut",
-      duration: 1,
-      scrub: true,
-    },
+    let tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: $(this),
+        start: "top bottom",
+        end: "bottom bottom",
+        ease: "Quint.easeOut",
+        duration: 1,
+        scrub: true,
+      },
+    });
+
+    tl.to(
+      target,
+      {
+        width: "76vw",
+        height: "76vw",
+      },
+      0
+    );
   });
 
-  tl.to(
-    target,
-    {
-      width: "76vw",
-      height: "76vw",
-    },
-    0
-  );
-});
+  $(".is--home-experience.is--third").each(function (index) {
+    let target = $(".circle--bg");
+    let target2 = $(".circle--bg-top");
 
-$(".is--home-experience.is--third").each(function (index) {
-  let target = $(".circle--bg");
-  let target2 = $(".circle--bg-top");
+    let tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: $(this),
+        start: "top bottom",
+        end: "bottom bottom",
+        ease: "Quint.easeOut",
+        duration: 1,
+        scrub: true,
+      },
+    });
 
-  let tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: $(this),
-      start: "top bottom",
-      end: "bottom bottom",
-      ease: "Quint.easeOut",
-      duration: 1,
-      scrub: true,
-    },
+    tl.to(
+      target,
+      {
+        width: "121vw",
+        height: "121vw",
+      },
+      0
+    );
+    tl.to(
+      target2,
+      {
+        width: "80vw",
+        height: "80vw",
+      },
+      0
+    );
   });
-
-  tl.to(
-    target,
-    {
-      width: "121vw",
-      height: "121vw",
-    },
-    0
-  );
-  tl.to(
-    target2,
-    {
-      width: "80vw",
-      height: "80vw",
-    },
-    0
-  );
-});
+}
 
 $(".section.is-home-map").each(function (index) {
   let targetMap = $(".map-wrapper");
@@ -98,3 +100,71 @@ $(".section.is-home-map").each(function (index) {
     .from(target, { opacity: 0, delay: 1 })
     .from(target2, { opacity: 0, delay: 1 });
 });
+
+if (window.innerWidth < 992) {
+  $(".is--home-experience.is--first").each(function (index) {
+    let target = $(".circle--bg");
+    let target2 = $(".circle--bg-top");
+
+    let tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: $(this),
+        start: "top top",
+        end: "bottom top",
+        ease: "Quint.easeOut",
+        duration: 1,
+        scrub: true,
+      },
+    });
+
+    tl.to(
+      target,
+      {
+        width: "189vw",
+        height: "189vw",
+      },
+      0
+    );
+    tl.to(
+      target2,
+      {
+        width: "140vw",
+        height: "140vw",
+      },
+      0
+    );
+  });
+
+  $(".is--home-experience.is--second").each(function (index) {
+    let target = $(".circle--bg");
+    let target2 = $(".circle--bg-top");
+
+    let tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: $(this),
+        start: "top top",
+        end: "bottom top",
+        ease: "Quint.easeOut",
+        duration: 1,
+        scrub: true,
+      },
+    });
+
+    tl.to(
+      target,
+      {
+        width: "323vw",
+        height: "323vw",
+      },
+      0
+    );
+    tl.to(
+      target2,
+      {
+        width: "175vw",
+        height: "175vw",
+      },
+      0
+    );
+  });
+}
