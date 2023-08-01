@@ -1,28 +1,28 @@
-$("[animation='hero--trigger']").each(function (index) {
-  let target = $("[animation='parallax-hero']");
+if (window.innerWidth > 992) {
+  $("[animation='hero--trigger']").each(function (index) {
+    let target = $("[animation='parallax-hero']");
 
-  let tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: $(this),
-      start: "top top",
-      end: "bottom top",
-      ease: "Quint.easeOut",
-      duration: 1,
-      scrub: true,
-    },
+    let tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: $(this),
+        start: "top top",
+        end: "bottom top",
+        ease: "Quint.easeOut",
+        duration: 1,
+        scrub: true,
+      },
+    });
+
+    tl.to(
+      target,
+      {
+        y: "-20%",
+        scale: 1.2,
+      },
+      0
+    );
   });
 
-  tl.to(
-    target,
-    {
-      y: "-20%",
-      scale: 1.2,
-    },
-    0
-  );
-});
-
-if (window.innerWidth > 992) {
   $(".is--home-experience.is--second").each(function (index) {
     let target = $(".circle--bg");
 
@@ -102,6 +102,28 @@ $(".section.is-home-map").each(function (index) {
 });
 
 if (window.innerWidth < 992) {
+  $("[animation='hero--trigger']").each(function (index) {
+    let target = $("[animation='parallax-hero']");
+
+    let tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: $(this),
+        start: "top top",
+        end: "bottom top",
+        ease: "Quint.easeOut",
+        duration: 1,
+        scrub: true,
+      },
+    });
+
+    tl.to(
+      target,
+      {
+        scale: 2,
+      },
+      0
+    );
+  });
   $(".is--home-experience.is--first").each(function (index) {
     let target = $(".circle--bg");
     let target2 = $(".circle--bg-top");
