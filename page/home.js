@@ -105,6 +105,7 @@ $(".section.is-home-map").each(function (index) {
     target,
     {
       opacity: 0,
+      delay: 1,
     },
     0
   );
@@ -112,6 +113,7 @@ $(".section.is-home-map").each(function (index) {
     target2,
     {
       opacity: 0,
+      delay: 1,
     },
     0
   );
