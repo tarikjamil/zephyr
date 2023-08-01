@@ -94,27 +94,7 @@ $(".section.is-home-map").each(function (index) {
     },
   });
 
-  tl.to(
-    targetMap,
-    {
-      scale: 1.2,
-    },
-    0
-  );
-  tl.from(
-    target,
-    {
-      opacity: 0,
-      delay: 1,
-    },
-    0
-  );
-  tl.from(
-    target2,
-    {
-      opacity: 0,
-      delay: 1,
-    },
-    0
-  );
+  tl.to(targetMap, { scale: 1.2 })
+    .from(target, { opacity: 0, delay: 1 })
+    .from(target2, { opacity: 0, delay: 1 });
 });
