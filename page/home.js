@@ -89,7 +89,7 @@ $(".section.is-home-map").each(function (index) {
   let tl = gsap.timeline({
     scrollTrigger: {
       trigger: $(this),
-      start: "top top",
+      start: "top top+=200",
       end: "bottom bottom",
       ease: "Quint.easeOut",
       duration: 1,
