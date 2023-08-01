@@ -78,3 +78,41 @@ $(".is--home-experience.is--third").each(function (index) {
     0
   );
 });
+
+$(".section.is-home-map").each(function (index) {
+  let targetMap = $(".map-wrapper");
+  let target = $(".home--map.is--1");
+  let target2 = $(".home--map.is--2");
+
+  let tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: $(this),
+      start: "top top",
+      end: "bottom bottom",
+      ease: "Quint.easeOut",
+      duration: 1,
+    },
+  });
+
+  tl.to(
+    targetMap,
+    {
+      scale: 1.2,
+    },
+    0
+  );
+  tl.from(
+    target,
+    {
+      opacity: 0,
+    },
+    0
+  );
+  tl.from(
+    target2,
+    {
+      opacity: 0,
+    },
+    0
+  );
+});
