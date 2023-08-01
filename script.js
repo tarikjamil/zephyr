@@ -124,5 +124,9 @@ $(".zephyr-footer-logo-wrapper").each(function (index) {
     },
   });
 
-  tl.to(target, { y: "100%", stagger: { each: 0.1, from: "start" } });
+  tl.from(target, {
+    y: "100%",
+    opacity: 0,
+    stagger: { each: 0.1, from: "start" },
+  });
 });
