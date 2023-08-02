@@ -79,27 +79,27 @@ if (window.innerWidth > 992) {
       0
     );
   });
-}
 
-$(".section.is-home-map").each(function (index) {
-  let targetMap = $(".map-wrapper");
-  let target = $(".home--map.is--1");
-  let target2 = $(".home--map.is--2");
+  $(".section.is-home-map").each(function (index) {
+    let targetMap = $(".map-wrapper");
+    let target = $(".home--map.is--1");
+    let target2 = $(".home--map.is--2");
 
-  let tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: $(this),
-      start: "top top+=200",
-      end: "bottom bottom",
-      ease: "Quint.easeOut",
-      duration: 1,
-    },
+    let tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: $(this),
+        start: "top top+=200",
+        end: "bottom bottom",
+        ease: "Quint.easeOut",
+        duration: 1,
+      },
+    });
+
+    tl.to(targetMap, { scale: 1.2 })
+      .from(target, { opacity: 0, delay: 0.75 })
+      .from(target2, { opacity: 0, delay: 0.75 });
   });
-
-  tl.to(targetMap, { scale: 1.2 })
-    .from(target, { opacity: 0, delay: 1 })
-    .from(target2, { opacity: 0, delay: 1 });
-});
+}
 
 if (window.innerWidth < 992) {
   $("[animation='hero--trigger']").each(function (index) {
@@ -188,5 +188,25 @@ if (window.innerWidth < 992) {
       },
       0
     );
+  });
+
+  $(".section.is-home-map").each(function (index) {
+    let targetMap = $(".map-wrapper");
+    let target = $(".home--map.is--1");
+    let target2 = $(".home--map.is--2");
+
+    let tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: $(this),
+        start: "top center",
+        end: "bottom bottom",
+        ease: "Quint.easeOut",
+        duration: 1,
+      },
+    });
+
+    tl.to(targetMap, { scale: 1.2 })
+      .from(target, { opacity: 0, delay: 0.5 })
+      .from(target2, { opacity: 0, delay: 0.5 });
   });
 }
