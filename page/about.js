@@ -16,6 +16,7 @@ $("[animation='parallax--trigger']").each(function (index) {
     target,
     {
       y: "-20%",
+      ease: "Quint.easeOut",
     },
     0
   );
