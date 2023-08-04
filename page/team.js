@@ -20,12 +20,6 @@ $(".team--accordion-trigger").on("click", function () {
       sibling.css("height", "auto");
 
       // Scroll the page to the accordion, leaving 200 pixels from the top
-      $("html, body").animate(
-        {
-          scrollTop: $(this).offset().top - 200,
-        },
-        animationDuration
-      );
     });
   }
   // Open and close the toggle div
