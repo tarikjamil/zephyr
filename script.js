@@ -135,3 +135,9 @@ $(".zephyr-footer-logo-wrapper").each(function (index) {
 $(".contact--form-bg").on("click", function () {
   $(".contact--form-close").click();
 });
+
+// on form submit
+$(".contact--form-interaction").submit(() => {
+  // click our div trigger to run our Webflow Interaction
+  $(".hack38-form-success-trigger").click();
+});
