@@ -131,3 +131,7 @@ $(".zephyr-footer-logo-wrapper").each(function (index) {
     stagger: { each: 0.1, from: "start" },
   });
 });
+
+$(".contact--form-bg").on("click", function () {
+  $(".contact--form-close").click();
+});
