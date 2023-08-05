@@ -139,5 +139,5 @@ $(".contact--form-bg").on("click", function () {
 // on form submit
 $(".contact--form-interaction").submit(() => {
   // click our div trigger to run our Webflow Interaction
-  $(".hack38-form-success-trigger").click();
+  $(".form--success-trigger").click();
 });
