@@ -141,3 +141,12 @@ $(".contact--form-interaction").submit(() => {
   // click our div trigger to run our Webflow Interaction
   $(".form--success-trigger").click();
 });
+
+// terms popup
+$(".").on("click", function () {
+  $(".term-popup-trigger");
+});
+
+$(".term-popup-bg").on("click", function () {
+  $(".term--form-close").click();
+});
