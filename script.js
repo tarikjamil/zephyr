@@ -22,7 +22,7 @@ function pageLoad() {
   tl.to(".main-wrapper", {
     opacity: 1,
     ease: "Quint.easeOut",
-    duration: 1,
+    duration: 0.6,
   });
   tl.from(".is--scroll-hero-scrub", {
     y: "100%",
