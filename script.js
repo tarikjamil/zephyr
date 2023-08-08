@@ -22,22 +22,22 @@ function pageLoad() {
   tl.to(".main-wrapper", {
     opacity: 1,
     ease: "Quint.easeOut",
-    duration: 0.6,
+    duration: 0.3,
   });
   tl.from(".is--scroll-hero-scrub", {
     y: "100%",
     opacity: "0",
     stagger: { each: 0.1, from: "start" },
     ease: "Quint.easeOut",
-    duration: 0.6,
+    duration: 0.3,
   });
   tl.from("[animation='loading']", {
     y: "20rem",
     opacity: "0",
     stagger: { each: 0.1, from: "start" },
     ease: "Quint.easeOut",
-    duration: 0.6,
-    delay: -0.6,
+    duration: 0.3,
+    delay: -0.3,
   });
 }
 pageLoad();
