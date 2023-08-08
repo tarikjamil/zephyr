@@ -1,0 +1,7 @@
+.heading-96 {
+  line-height: 1.2;
+}
+
+.split-line:nth-child(n + 1) {
+  margin-top: -4rem;
+}
