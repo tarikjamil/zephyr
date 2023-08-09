@@ -124,7 +124,7 @@ if (window.innerWidth < 992) {
       0
     );
   });
-  $(".is--home-experience.is--first").each(function (index) {
+  $(".circle--2").each(function (index) {
     let target = $(".circle--bg");
     let target2 = $(".circle--bg-top");
 
@@ -157,7 +157,7 @@ if (window.innerWidth < 992) {
     );
   });
 
-  $(".is--home-experience.is--second").each(function (index) {
+  $(".circle--3").each(function (index) {
     let target = $(".circle--bg");
     let target2 = $(".circle--bg-top");
 
