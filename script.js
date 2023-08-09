@@ -132,6 +132,33 @@ $(".zephyr-footer-logo-wrapper").each(function (index) {
   });
 });
 
+$(".scale-scroll-parent").each(function () {
+  let target = $(this).find(".scale-scroll");
+  let target2 = $(this).find(".image-100");
+
+  let tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: this,
+      start: "top bottom", // This means animation starts when the top of your element hits the bottom of the viewport.
+      markers: true, // This will add visual markers. Useful for debugging.
+    },
+  });
+
+  tl.from(target, {
+    scale: 1.6,
+    duration: 1,
+    ease: "Quint.easeOut",
+  }).from(
+    target2,
+    {
+      scale: 1.1,
+      duration: 1,
+      ease: "Quint.easeOut",
+    },
+    0
+  ); // Starts at the same time as the previous animation.
+});
+
 $(".contact--form-bg").on("click", function () {
   $(".contact--form-close").click();
 });
@@ -153,35 +180,4 @@ $(".").on("click", function () {
 
 $(".term-popup-bg").on("click", function () {
   $(".term--form-close").click();
-});
-
-$(document).ready(function () {
-  gsap.registerPlugin(ScrollTrigger);
-
-  $(".scale-scroll-parent").each(function () {
-    let target = $(this).find(".scale-scroll");
-    let target2 = $(this).find(".image-100");
-
-    let tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: this,
-        start: "top bottom", // This means animation starts when the top of your element hits the bottom of the viewport.
-        markers: true, // This will add visual markers. Useful for debugging.
-      },
-    });
-
-    tl.from(target, {
-      scale: 1.6,
-      duration: 1,
-      ease: "Quint.easeOut",
-    }).from(
-      target2,
-      {
-        scale: 1.1,
-        duration: 1,
-        ease: "Quint.easeOut",
-      },
-      0
-    ); // Starts at the same time as the previous animation.
-  });
 });
