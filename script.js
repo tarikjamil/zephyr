@@ -154,3 +154,22 @@ $(".").on("click", function () {
 $(".term-popup-bg").on("click", function () {
   $(".term--form-close").click();
 });
+
+$(".scale-scroll").each(function (index) {
+  let target = $(this);
+  let tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: $(this),
+      start: "top bottom",
+      ease: "Quint.easeOut",
+      duration: 1,
+    },
+  });
+  tl.from(
+    target,
+    {
+      scale: 1.6,
+    },
+    0
+  );
+});
