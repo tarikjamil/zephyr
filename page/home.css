@@ -1,0 +1,65 @@
+.is--home-experience .md-cd-40 {
+  opacity: 0;
+}
+
+.is--home-experience .rg-cd-24 {
+  opacity: 0;
+}
+
+.is--home-experience .technicians-list {
+  opacity: 0;
+}
+
+.is--home-experience .home-experience-img1,
+.is--home-experience .home-experience-img2,
+.is--home-experience .home-experience-img3 {
+  opacity: 0;
+}
+
+.circle--1-body .is--home-experience.is--1 .md-cd-40 {
+  opacity: 1;
+}
+
+.circle--1-body .is--home-experience.is--1 .rg-cd-24 {
+  opacity: 1;
+}
+
+.circle--1-body .is--home-experience.is--1 .technicians-list {
+  opacity: 1;
+}
+
+.circle--1-body .is--home-experience.is--1 .home-experience-img1 {
+  opacity: 1;
+}
+
+.circle--2-body .is--home-experience.is--2 .md-cd-40 {
+  opacity: 1;
+}
+
+.circle--2-body .is--home-experience.is--2 .rg-cd-24 {
+  opacity: 1;
+}
+
+.circle--2-body .is--home-experience.is--2 .technicians-list {
+  opacity: 1;
+}
+
+.circle--2-body .is--home-experience.is--2 .home-experience-img2 {
+  opacity: 1;
+}
+
+.circle--3-body .is--home-experience.is--3 .md-cd-40 {
+  opacity: 1;
+}
+
+.circle--3-body .is--home-experience.is--3 .rg-cd-24 {
+  opacity: 1;
+}
+
+.circle--3-body .is--home-experience.is--3 .technicians-list {
+  opacity: 1;
+}
+
+.circle--3-body .is--home-experience.is--3 .home-experience-img3 {
+  opacity: 1;
+}
