@@ -163,7 +163,7 @@ $(".scale-scroll-parent").each(function (index) {
     .timeline({
       scrollTrigger: {
         trigger: $(this),
-        start: "top bottom",
+        start: "top center",
       },
     })
     .from(
