@@ -136,6 +136,10 @@ $(".contact--form-bg").on("click", function () {
   $(".contact--form-close").click();
 });
 
+$(".button.is--close-popup").on("click", function () {
+  $(".contact--form-close").click();
+});
+
 // on form submit
 $(".contact--form-interaction").submit(() => {
   // click our div trigger to run our Webflow Interaction
