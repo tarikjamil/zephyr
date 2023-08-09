@@ -155,8 +155,9 @@ $(".term-popup-bg").on("click", function () {
   $(".term--form-close").click();
 });
 
-$(".scale-scroll").each(function (index) {
-  let target = $(this);
+$(".is--scale-scroll").each(function (index) {
+  let target = $(this).find(".scale-scroll");
+  let target2 = $(this).find(".image-100");
   let tl = gsap.timeline({
     scrollTrigger: {
       trigger: $(this),
@@ -169,6 +170,13 @@ $(".scale-scroll").each(function (index) {
     target,
     {
       scale: 1.6,
+    },
+    0
+  );
+  tl.from(
+    target2,
+    {
+      scale: 1.1,
     },
     0
   );
