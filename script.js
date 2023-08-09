@@ -155,7 +155,7 @@ $(".term-popup-bg").on("click", function () {
   $(".term--form-close").click();
 });
 
-$(".is--scale-scroll").each(function (index) {
+$(".scale-scroll-parent").each(function (index) {
   let target = $(this).find(".scale-scroll");
   let target2 = $(this).find(".image-100");
   let tl = gsap.timeline({
