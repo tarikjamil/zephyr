@@ -139,20 +139,20 @@ $(".scale-scroll-parent").each(function () {
   let tl = gsap.timeline({
     scrollTrigger: {
       trigger: this,
-      start: "top bottom", // This means animation starts when the top of your element hits the bottom of the viewport.
+      start: "top center", // This means animation starts when the top of your element hits the bottom of the viewport.
       markers: true, // This will add visual markers. Useful for debugging.
     },
   });
 
   tl.from(target, {
     scale: 1.6,
-    duration: 1,
+    duration: 0.5,
     ease: "Quint.easeOut",
   }).from(
     target2,
     {
       scale: 1.1,
-      duration: 1,
+      duration: 0.5,
       ease: "Quint.easeOut",
     },
     0
