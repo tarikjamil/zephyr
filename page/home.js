@@ -237,7 +237,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
     ScrollTrigger.create({
       trigger: triggerEl,
       start: "top center",
-      end: "bottom top",
+      end: "bottom center",
       onToggle: ({ self, isActive }) => {
         if (isActive) {
           targetEl.addClass(classSetting);

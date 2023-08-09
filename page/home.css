@@ -1,19 +1,31 @@
 .is--home-experience .md-cd-40 {
   opacity: 0;
+  transition-property: all;
+  transition-duration: 200ms;
+  transition-timing-function: ease;
 }
 
 .is--home-experience .rg-cd-24 {
   opacity: 0;
+  transition-property: all;
+  transition-duration: 200ms;
+  transition-timing-function: ease;
 }
 
 .is--home-experience .technicians-list {
   opacity: 0;
+  transition-property: all;
+  transition-duration: 200ms;
+  transition-timing-function: ease;
 }
 
 .is--home-experience .home-experience-img1,
 .is--home-experience .home-experience-img2,
 .is--home-experience .home-experience-img3 {
   opacity: 0;
+  transition-property: all;
+  transition-duration: 200ms;
+  transition-timing-function: ease;
 }
 
 .circle--1-body .is--home-experience.is--1 .md-cd-40 {
