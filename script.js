@@ -134,7 +134,7 @@ $(".zephyr-footer-logo-wrapper").each(function (index) {
 
 $(".scale-scroll-parent").each(function () {
   let target = $(this).find(".scale-scroll");
-  let target2 = $(this).find(".image-100");
+  let target2 = $(this).find(".image-100-no");
 
   let tl = gsap.timeline({
     scrollTrigger: {
