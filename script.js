@@ -144,18 +144,26 @@ $(".scale-scroll-parent").each(function () {
     },
   });
 
-  tl.from(target, {
-    scale: 1.6,
-    duration: 0.5,
-    ease: "Quint.easeOut",
-  }).from(
+  tl.from(
+    target,
+    {
+      scale: 1.6,
+      duration: 0.5,
+      ease: "Quint.easeOut",
+    },
+    {
+      scale: 1,
+    }
+  ).fromTo(
     target2,
     {
       scale: 1.1,
       duration: 0.5,
       ease: "Quint.easeOut",
     },
-    0
+    {
+      scale: 1,
+    }
   ); // Starts at the same time as the previous animation.
 });
 
