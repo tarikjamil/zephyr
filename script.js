@@ -158,26 +158,30 @@ $(".term-popup-bg").on("click", function () {
 $(".scale-scroll-parent").each(function (index) {
   let target = $(this).find(".scale-scroll");
   let target2 = $(this).find(".image-100");
-  let tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: $(this),
-      start: "top bottom",
-      ease: "Quint.easeOut",
-      duration: 1,
-    },
-  });
-  tl.from(
-    target,
-    {
-      scale: 1.6,
-    },
-    0
-  );
-  tl.from(
-    target2,
-    {
-      scale: 1.1,
-    },
-    0
-  );
+
+  gsap
+    .timeline({
+      scrollTrigger: {
+        trigger: $(this),
+        start: "top bottom",
+      },
+    })
+    .from(
+      target,
+      {
+        scale: 1.6,
+        ease: "Quint.easeOut",
+        duration: 1,
+      },
+      0
+    )
+    .from(
+      target2,
+      {
+        scale: 1.1,
+        ease: "Quint.easeOut",
+        duration: 1,
+      },
+      0
+    );
 });
