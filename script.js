@@ -140,7 +140,7 @@ $(".scale-scroll-parent").each(function () {
     scrollTrigger: {
       trigger: this,
       start: "top center", // This means animation starts when the top of your element hits the bottom of the viewport.
-      markers: true, // This will add visual markers. Useful for debugging.
+      markers: false, // This will add visual markers. Useful for debugging.
     },
   });
 
