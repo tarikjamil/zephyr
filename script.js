@@ -155,33 +155,33 @@ $(".term-popup-bg").on("click", function () {
   $(".term--form-close").click();
 });
 
-$(".scale-scroll-parent").each(function (index) {
-  let target = $(this).find(".scale-scroll");
-  let target2 = $(this).find(".image-100");
+$(document).ready(function () {
+  gsap.registerPlugin(ScrollTrigger);
 
-  gsap
-    .timeline({
+  $(".scale-scroll-parent").each(function () {
+    let target = $(this).find(".scale-scroll");
+    let target2 = $(this).find(".image-100");
+
+    let tl = gsap.timeline({
       scrollTrigger: {
-        trigger: $(this),
-        start: "top center",
+        trigger: this,
+        start: "top bottom", // This means animation starts when the top of your element hits the bottom of the viewport.
+        markers: true, // This will add visual markers. Useful for debugging.
       },
-    })
-    .from(
-      target,
-      {
-        scale: 1.6,
-        ease: "Quint.easeOut",
-        duration: 1,
-      },
-      0
-    )
-    .from(
+    });
+
+    tl.from(target, {
+      scale: 1.6,
+      duration: 1,
+      ease: "Quint.easeOut",
+    }).from(
       target2,
       {
         scale: 1.1,
-        ease: "Quint.easeOut",
         duration: 1,
+        ease: "Quint.easeOut",
       },
       0
-    );
+    ); // Starts at the same time as the previous animation.
+  });
 });
