@@ -30,6 +30,10 @@
   opacity: 1;
 }
 
+.is--scroll-hero-scrub {
+  line-height: 114%;
+}
+
 /* Remove default appearance for all browsers */
 select {
   -webkit-appearance: none; /* Remove default styling in WebKit browsers (like Safari and Chrome) */
