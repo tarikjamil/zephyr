@@ -205,9 +205,9 @@ if (window.innerWidth < 992) {
       },
     });
 
-    tl.to(targetMap, { scale: 1.2 })
-      .from(target, { opacity: 0, delay: -1 })
-      .from(target2, { opacity: 0, delay: -1 });
+    tl.to(targetMap, { scale: 1.2 });
+    tl.from(target, { opacity: 0, delay: -1 });
+    tl.from(target2, { opacity: 0, delay: -1 });
   });
 }
 
