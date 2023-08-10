@@ -205,9 +205,9 @@ if (window.innerWidth < 992) {
       },
     });
 
-    tl.to(targetMap, { scale: 1.2 });
-    tl.from(target, { opacity: 0 });
-    tl.from(target2, { opacity: 0 });
+    tl.to(targetMap, { scale: 1.2 }, 0); // Start at 0 seconds in the timeline
+    tl.from(target, { opacity: 0 }, 0); // Start at 0 seconds in the timeline
+    tl.from(target2, { opacity: 0 }, 0);
   });
 }
 
