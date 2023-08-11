@@ -23,6 +23,111 @@ if (window.innerWidth > 992) {
     );
   });
 
+  $(".section.is-home-map").each(function (index) {
+    let targetMap = $(".map-wrapper");
+    let target = $(".home--map.is--1");
+    let target2 = $(".home--map.is--2");
+
+    let tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: $(this),
+        start: "top top+=200",
+        end: "bottom bottom",
+        ease: "Quint.easeOut",
+        duration: 1,
+      },
+    });
+
+    tl.to(targetMap, { scale: 1.2 }, 0); // Start at 0 seconds in the timeline
+    tl.from(target, { opacity: 0 }, 0); // Start at 0 seconds in the timeline
+    tl.from(target2, { opacity: 0 }, 0);
+  });
+}
+
+if (window.innerWidth < 992) {
+  $("[animation='hero--trigger']").each(function (index) {
+    let target = $("[animation='parallax-hero']");
+
+    let tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: $(this),
+        start: "top top",
+        end: "bottom top",
+        ease: "Quint.easeOut",
+        duration: 1,
+        scrub: true,
+      },
+    });
+
+    tl.to(
+      target,
+      {
+        scale: 2,
+      },
+      0
+    );
+  });
+
+  $(".section.is-home-map").each(function (index) {
+    let targetMap = $(".map-wrapper");
+    let target = $(".home--map.is--1");
+    let target2 = $(".home--map.is--2");
+
+    let tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: $(this),
+        start: "top center",
+        end: "bottom bottom",
+        ease: "Quint.easeOut",
+        duration: 1,
+      },
+    });
+
+    tl.to(targetMap, { scale: 1.2 }, 0); // Start at 0 seconds in the timeline
+    tl.from(target, { opacity: 0 }, 0); // Start at 0 seconds in the timeline
+    tl.from(target2, { opacity: 0 }, 0);
+  });
+}
+
+// PAGE COLOR POWER-UP
+window.addEventListener("DOMContentLoaded", (event) => {
+  // attribute value checker
+  function attr(defaultVal, attrVal) {
+    const defaultValType = typeof defaultVal;
+    if (typeof attrVal !== "string" || attrVal.trim() === "") return defaultVal;
+    if (attrVal === "true" && defaultValType === "boolean") return true;
+    if (attrVal === "false" && defaultValType === "boolean") return false;
+    if (isNaN(attrVal) && defaultValType === "string") return attrVal;
+    if (!isNaN(attrVal) && defaultValType === "number") return +attrVal;
+    return defaultVal;
+  }
+  // pagecolor trigger
+  $("[tr-pagecolor-element='trigger']").each(function (index) {
+    // elements
+    let triggerEl = $(this),
+      targetEl = $(".body");
+    // settings
+    let classSetting = attr(
+      "after-hero-body",
+      triggerEl.attr("tr-pagecolor-class")
+    );
+    // result
+    ScrollTrigger.create({
+      trigger: triggerEl,
+      start: "top center",
+      end: "bottom center",
+      onToggle: ({ self, isActive }) => {
+        if (isActive) {
+          targetEl.addClass(classSetting);
+        } else {
+          targetEl.removeClass(classSetting);
+        }
+      },
+    });
+  });
+});
+
+if (window.innerWidth > 768) {
   $(".circle--2").each(function (index) {
     let target = $(".circle--bg");
 
@@ -79,51 +184,9 @@ if (window.innerWidth > 992) {
       0
     );
   });
-
-  $(".section.is-home-map").each(function (index) {
-    let targetMap = $(".map-wrapper");
-    let target = $(".home--map.is--1");
-    let target2 = $(".home--map.is--2");
-
-    let tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: $(this),
-        start: "top top+=200",
-        end: "bottom bottom",
-        ease: "Quint.easeOut",
-        duration: 1,
-      },
-    });
-
-    tl.to(targetMap, { scale: 1.2 }, 0); // Start at 0 seconds in the timeline
-    tl.from(target, { opacity: 0 }, 0); // Start at 0 seconds in the timeline
-    tl.from(target2, { opacity: 0 }, 0);
-  });
 }
 
-if (window.innerWidth < 992) {
-  $("[animation='hero--trigger']").each(function (index) {
-    let target = $("[animation='parallax-hero']");
-
-    let tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: $(this),
-        start: "top top",
-        end: "bottom top",
-        ease: "Quint.easeOut",
-        duration: 1,
-        scrub: true,
-      },
-    });
-
-    tl.to(
-      target,
-      {
-        scale: 2,
-      },
-      0
-    );
-  });
+if (window.innerWidth < 768) {
   $(".circle--2").each(function (index) {
     let target = $(".circle--bg");
     let target2 = $(".circle--bg-top");
@@ -189,62 +252,4 @@ if (window.innerWidth < 992) {
       0
     );
   });
-
-  $(".section.is-home-map").each(function (index) {
-    let targetMap = $(".map-wrapper");
-    let target = $(".home--map.is--1");
-    let target2 = $(".home--map.is--2");
-
-    let tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: $(this),
-        start: "top center",
-        end: "bottom bottom",
-        ease: "Quint.easeOut",
-        duration: 1,
-      },
-    });
-
-    tl.to(targetMap, { scale: 1.2 }, 0); // Start at 0 seconds in the timeline
-    tl.from(target, { opacity: 0 }, 0); // Start at 0 seconds in the timeline
-    tl.from(target2, { opacity: 0 }, 0);
-  });
 }
-
-// PAGE COLOR POWER-UP
-window.addEventListener("DOMContentLoaded", (event) => {
-  // attribute value checker
-  function attr(defaultVal, attrVal) {
-    const defaultValType = typeof defaultVal;
-    if (typeof attrVal !== "string" || attrVal.trim() === "") return defaultVal;
-    if (attrVal === "true" && defaultValType === "boolean") return true;
-    if (attrVal === "false" && defaultValType === "boolean") return false;
-    if (isNaN(attrVal) && defaultValType === "string") return attrVal;
-    if (!isNaN(attrVal) && defaultValType === "number") return +attrVal;
-    return defaultVal;
-  }
-  // pagecolor trigger
-  $("[tr-pagecolor-element='trigger']").each(function (index) {
-    // elements
-    let triggerEl = $(this),
-      targetEl = $(".body");
-    // settings
-    let classSetting = attr(
-      "after-hero-body",
-      triggerEl.attr("tr-pagecolor-class")
-    );
-    // result
-    ScrollTrigger.create({
-      trigger: triggerEl,
-      start: "top center",
-      end: "bottom center",
-      onToggle: ({ self, isActive }) => {
-        if (isActive) {
-          targetEl.addClass(classSetting);
-        } else {
-          targetEl.removeClass(classSetting);
-        }
-      },
-    });
-  });
-});
